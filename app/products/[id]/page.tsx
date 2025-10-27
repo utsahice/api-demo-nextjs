@@ -1,7 +1,7 @@
 import Link from "next/link";
 import { resolve } from "path";
-export default async function ProductPage({ params }) {
-  const { id } = await params;
+export default async function ProductPage({ params:any }) {
+  const { id } = await any;
   await new Promise((resolve)=> setTimeout(resolve,2500))
   const res = await fetch(`https://fakestoreapi.com/products/${id}`, {
     next: { revalidate: 10 }, 
