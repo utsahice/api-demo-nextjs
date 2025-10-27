@@ -1,11 +1,15 @@
-'use client'; 
-
-export default function Error({ error, reset }) {
+'use client' 
+export default function Error({
+  error,
+  reset,
+}: {
+  error: Error & { digest?: string }
+  reset: () => void
+}) {
   return (
     <div>
-      <h2>Failed to load products</h2>
-      <p>{error.message}</p>
+      <h2>Something went wrong!</h2>
       <button onClick={() => reset()}>Try again</button>
     </div>
-  );
+  )
 }

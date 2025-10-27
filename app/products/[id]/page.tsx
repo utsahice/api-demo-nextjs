@@ -3,7 +3,7 @@ import { resolve } from "path";
 export default async function ProductPage({ params }) {
   const { id } = await params;
   await new Promise((resolve)=> setTimeout(resolve,2500))
-  const res = await fetch(`https://fakestoreapi.com/products/${id}`, {
+  const res = await fetch(`https://fakestoreapi.com/productss/${id}`, {
     next: { revalidate: 10 }, 
   });
 
